@@ -1,12 +1,13 @@
+# docker-compose.yml
+# Author: Sebastián Collado
+# Description: Define services and deloy parameters
+
 version: '2'
 services:
-    wwwserver:
+    web:                                # WEB SERVICE SPECIFICATION
        build: .
-       image: dasn/phpciwebapp 
-       environment:
-            PORT: 80 
+       image: phpciwebapp               # image name
        ports:
-            - "8080:80"
+            - "8080:80"                 # bind local 8080 to container 80
        volumes:
-            - ./html:/var/www/html
-
+            - ./html:/var/www/html      # bind local folder to container folder

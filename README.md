@@ -1,28 +1,36 @@
-# Sample container with Php Insecure app
+# Práctica 2 DASN
 
-## Requeriments
+## Descripción
+Despliegue de una pila de desarrollo para CodeIgniter utilizando Docker y Docker Compose. Despliegue realizado de forma local y remota sobre Google Cloud.
 
-Docker, make
+## Autor
+Sebastián Collado Montañez
 
-## Usage
-You can control the local container with ```docker-compose``` commands, i.e. up, stop, start, down, etc. however, if available, the ```make``` utility can be used to simplify the usual operations.
+## Detalles de la pila
+Apache + PHP 7.2 + CodeIgniter 3 + SQLite
 
-- Build and launch container
+## Requisitos
+Para el despliegue se necesita tanto el servicio `docker` activo como `docker-compose`.
 
-```bash
-$ make
+## Despliegue local
+Para iniciar la aplicación por el puerto `8080`:
 ```
-- Build container image
-
-```bash
-$ make build
-```
-- Stop container and remove Image
-
-```bash
-$ make clean
+git clone https://github.com/sebacollado/phpciwebapp
+cd phpciwebapp
+make run
 ```
 
-## Options
-- The path of the embbedded sqlite database can be modified in php files 
-- Database must be initialized in url <http://localhost:8080/initdb.php>
+## Datos del proyecto
+
+### Repositorio GitHub (imagen + código + docker-compose.yml + Makefile)
+https://github.com/sebacollado/phpciwebapp
+
+### Repositorio DockerHub (imagen)
+https://hub.docker.com/r/sebacollado/phpciwebapp
+
+### Demo
+http://34.66.185.218:8080/
+
+## Otras operaciones
+- Para reconstruir la imágen: `make build`
+- Para parar el contenedor y borrar imagen y contenedor: `make clean`

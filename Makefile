@@ -15,7 +15,7 @@ run: build
 # Build Docker image
 # Requires: clean
 build: clean 
-	docker-compose build 
+	docker-compose build
 	@echo  Imagen $(IMAGE) creada
 
 # Stop container and remove image.

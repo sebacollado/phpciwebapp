@@ -1,7 +1,7 @@
 # Práctica 2 DASN
 
 ## Descripción
-Despliegue de una pila de desarrollo para CodeIgniter utilizando Docker y Docker Compose. Despliegue realizado de forma local y remota sobre Google Cloud.
+Despliegue de una pila de desarrollo para CodeIgniter utilizando `Docker`, `Docker Compose` y `make`. Despliegue realizado de forma local y remota sobre Google Cloud.
 
 ## Autor
 Sebastián Collado Montañez
@@ -10,7 +10,7 @@ Sebastián Collado Montañez
 Apache + PHP 7.2 + CodeIgniter 3 + SQLite
 
 ## Requisitos
-Para el despliegue se necesita tanto el servicio `docker` activo como `docker-compose`.
+Para el despliegue se necesita `docker`, `docker-compose` y `make`.
 
 ## Despliegue local
 Para iniciar la aplicación por el puerto `8080`:

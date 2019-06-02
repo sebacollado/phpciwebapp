@@ -90,6 +90,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</span>
 					<br>
 
+					<br><h6 class="mb-1">Actividad 2.4.</h6><hr>
+
+					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo9">Ejemplo 9. Formulario vulnerable a CSRF.</a>
+						<span class="badge badge-secondary">CSRF</span>
+						<span class="badge badge-danger">Vulnerable</span>
+					</span>
+					<br>
+
+					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo10">Ejemplo 10. Formulario no vulnerable a CSRF.</a>
+						<span class="badge badge-secondary">CSRF</span>
+						<span class="badge badge-success">Seguro</span>
+					</span>
+					<br>
+
 				</span>
 				</div>
 			</div>

@@ -152,4 +152,26 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function ejemplo9()
+	{
+		$data = array(
+			'example_title' => 'Ejemplo 9. Formulario vulnerable a CSRF'
+		);
+
+		$this->load->view('templates/header');
+		$this->load->view('examples/csrfnotsafe', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function ejemplo10()
+	{
+		$data = array(
+			'example_title' => 'Ejemplo 10. Formulario no vulnerable a CSRF'
+		);
+
+		$this->load->view('templates/header');
+		$this->load->view('examples/csrfsafe', $data);
+		$this->load->view('templates/footer');
+	}
+
 }

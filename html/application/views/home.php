@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="d-flex w-100 justify-content-between">
 					<h5 class="mb-1">Ejemplos</h5>
 					</div>
-
+					<h6 class="mb-1">Actividad 2.2.</h6>
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo1">Ejemplo 1. Haciéndolo mal.</a>
 						<span class="badge badge-secondary">SQLInjection</span>
 						<span class="badge badge-danger">Vulnerable</span>

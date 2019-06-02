@@ -19,13 +19,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="d-flex w-100 justify-content-between">
 					<h5 class="mb-1">Evaluación de la pila de desarrollo</h5>
 					</div>
-					<p class="mb-1">Apache + PHP + CodeIgniter + SQLite</p>
+					<p class="mb-1">Apache + PHP + CI + SQLite</p>
 				</span>
 				<span href="#" class="list-group-item">
 					<div class="d-flex w-100 justify-content-between">
 					<h5 class="mb-1">Detalles de la pila</h5>
 					</div>
-					<p class="mb-1">Apache + PHP + CI + SQLite</p>
+					<p class="mb-1">Apache + PHP 7.2 + CodeIgniter 3 + SQLite 3</p>
 				</span>
 				<span href="#" class="list-group-item">
 					<div class="d-flex w-100 justify-content-between">
@@ -37,33 +37,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="d-flex w-100 justify-content-between">
 					<h5 class="mb-1">Ejemplos</h5>
 					</div>
-					<h6 class="mb-1">Actividad 2.2.</h6>
+
+					<br><h6 class="mb-1">Actividad 2.2.</h6><hr>
+
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo1">Ejemplo 1. Haciéndolo mal.</a>
-						<span class="badge badge-secondary">SQLInjection</span>
+						<span class="badge badge-secondary">SQL Injection</span>
 						<span class="badge badge-danger">Vulnerable</span>
 					</span>
 					<br>
 
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo2">Ejemplo 2. Utilizando el método “Escape”.</a>
-						<span class="badge badge-secondary">SQLInjection</span>
+						<span class="badge badge-secondary">SQL Injection</span>
 						<span class="badge badge-success">Seguro</span>
 					</span>
 					<br>
 
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo3">Ejemplo 3. Utilizando el método “Query Binding”.</a>
-						<span class="badge badge-secondary">SQLInjection</span>
+						<span class="badge badge-secondary">SQL Injection</span>
 						<span class="badge badge-success">Seguro</span>
 					</span>
 					<br>
 
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo4">Ejemplo 4. Utilizando la clase “Query Builder Class”.</a>
-						<span class="badge badge-secondary">SQLInjection</span>
+						<span class="badge badge-secondary">SQL Injection</span>
 						<span class="badge badge-success">Seguro</span>
 					</span>
 					<br>
 
 					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo5">Ejemplo 5. Utilizando “Form Validation”.</a>
-						<span class="badge badge-secondary">Validación de datos</span>
+						<span class="badge badge-secondary">SQL Injection</span>
+						<span class="badge badge-success">Seguro</span>
+					</span>
+					<br>
+
+					<br><h6 class="mb-1">Actividad 2.3.</h6><hr>
+
+					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo6">Ejemplo 6. Haciéndolo mal (v2).</a>
+						<span class="badge badge-secondary">XSS Injection</span>
+						<span class="badge badge-danger">Vulnerable</span>
+					</span>
+					<br>
+
+					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo7">Ejemplo 7. Utilizando el método “xss_clean”.</a>
+						<span class="badge badge-secondary">XSS Injection</span>
+						<span class="badge badge-warning">Vulnerable o no, según requisitos de la aplicación</span>
+					</span>
+					<br>
+
+					<span><a class="mb-1" href="<?=base_url();?>home/ejemplo8">Ejemplo 8. Utilizando el método “xss_clean” y “html_escape”.</a>
+						<span class="badge badge-secondary">XSS Injection</span>
 						<span class="badge badge-success">Seguro</span>
 					</span>
 					<br>

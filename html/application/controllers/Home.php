@@ -101,4 +101,55 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function ejemplo6()
+	{
+		$data = array(
+			'example_title' => 'Ejemplo 6. Haciéndolo mal (v2).',
+			'comment' => ''
+		);
+
+		// Data filter here
+		if($this->input->post('comment')){
+			$data['comment'] = $this->input->post('comment');
+		}
+
+		$this->load->view('templates/header');
+		$this->load->view('examples/xssinjection', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function ejemplo7()
+	{
+		$data = array(
+			'example_title' => 'Ejemplo 7. Utilizando el método “xss_clean”',
+			'comment' => ''
+		);
+
+		// Data filter here
+		if($this->input->post('comment')){
+			$data['comment'] = $this->security->xss_clean($this->input->post('comment'));
+		}
+
+		$this->load->view('templates/header');
+		$this->load->view('examples/xssinjection', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function ejemplo8()
+	{
+		$data = array(
+			'example_title' => 'Ejemplo 8. Utilizando el método “xss_clean” y “html_escape”',
+			'comment' => ''
+		);
+
+		// Data filter here
+		if($this->input->post('comment')){
+			$data['comment'] = html_escape($this->security->xss_clean($this->input->post('comment')));
+		}
+
+		$this->load->view('templates/header');
+		$this->load->view('examples/xssinjection', $data);
+		$this->load->view('templates/footer');
+	}
+
 }

@@ -7,6 +7,8 @@ MAINTAINER scm00041@red.ujaen.es
 
 # RUN executes some command inside container
 RUN a2enmod rewrite
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN service apache2 restart
 
 # WORKDIR sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile
 WORKDIR /var/www/html

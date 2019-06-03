@@ -53,8 +53,19 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
+	switch($_SERVER["HTTP_HOST"]){
+		case "localhost:8080":
+			define('ENVIRONMENT', 'development');
+			define("BASEURL", "http://localhost:8080");
+		break;
+		default:
+			define('ENVIRONMENT', 'production');
+			define("BASEURL", "http://34.66.185.218:8080"); //change to https if need
+		break;
+	}
+	
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

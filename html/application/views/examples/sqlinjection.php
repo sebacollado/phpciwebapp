@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="card">
             <div class="card-body">
-                <form method="post" action="">
+                <?php echo form_open(''); ?>
                     <div class="form-group">
                         <label>Introduce tu email para obtener información de tu usuario</label>
                         <input type="text" class="form-control" name="email" placeholder="Introduce tu email" required>

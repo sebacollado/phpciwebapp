@@ -1,0 +1,28 @@
+# docker-compose.yml
+# Author: Sebastián Collado
+# Description: Define services and parameters to deploy loadbalancer and 2 web servers
+
+version: '2'
+services:
+  loadbalancer:
+    build: .
+    ports: 
+      - "80:80"
+    tty: true
+    links:
+      - wwwserver1
+      - wwwserver2
+  wwwserver1:
+    build: ../
+    image: phpciwebapp 
+    ports:
+      - "8081:80"
+    volumes:
+      - ../html:/var/www/html
+  wwwserver2:
+    build: ../
+    image: phpciwebapp 
+    ports:
+      - "8082:80"
+    volumes:
+      - ../html:/var/www/html

@@ -1,0 +1,22 @@
+
+# Enable API and dashboard
+[api]
+
+# Enable logs
+[traefikLog]
+[accessLog]
+
+[file]
+#Manual frontend/backend  configuration
+
+[frontends]
+  [frontends.frontend1]
+    entryPoints = ["http"]
+    backend = "backend1"
+
+[backends]
+  [backends.backend1]
+	  [backends.backend1.servers.server1]
+		url = "http://wwwserver1:80" 
+	  [backends.backend1.servers.server2]
+		url = "http://wwwserver2:80"

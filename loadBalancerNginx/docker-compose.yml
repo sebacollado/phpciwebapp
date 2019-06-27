@@ -7,7 +7,7 @@ services:
   loadbalancer:
     build: .
     ports: 
-      - "80:80"
+      - "8080:8080"
     tty: true
     links:
       - wwwserver1

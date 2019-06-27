@@ -56,6 +56,10 @@
 	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 	switch($_SERVER["HTTP_HOST"]){
+		case "localhost":
+			define('ENVIRONMENT', 'development');
+			define("BASEURL", "http://localhost");
+		break;
 		case "localhost:8080":
 			define('ENVIRONMENT', 'development');
 			define("BASEURL", "http://localhost:8080");

@@ -15,7 +15,7 @@ Docker
 $ docker-compose up -d
 ```
 
-- Access web application through load balancer using port 80, e.g. http://localhost:80
+- Access web application through load balancer (NGINX) using port 80, e.g. http://localhost:80
 
 - Access web application containers directly using port 8081 and 8082, e.g. http://localhost:8081
 

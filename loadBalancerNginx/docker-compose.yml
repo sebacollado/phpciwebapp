@@ -6,12 +6,13 @@ version: '2'
 services:
   loadbalancer:
     build: .
-    ports: 
-      - "8080:8080"
+    ports:
+      - "80:80"
     links:
       - wwwserver1
       - wwwserver2
   wwwserver1:
+    container_name: wwwserver1
     build: ../
     image: phpciwebapp 
     ports:
@@ -19,6 +20,7 @@ services:
     volumes:
       - ../html:/var/www/html
   wwwserver2:
+    container_name: wwwserver2
     build: ../
     image: phpciwebapp 
     ports:

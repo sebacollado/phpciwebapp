@@ -8,7 +8,6 @@ services:
     build: .
     ports: 
       - "8080:8080"
-    tty: true
     links:
       - wwwserver1
       - wwwserver2

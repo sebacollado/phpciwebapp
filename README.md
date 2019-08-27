@@ -3,9 +3,6 @@
 ## Descripción
 Despliegue de una pila de desarrollo para CodeIgniter utilizando `Docker`, `Docker Compose` y `make`. Despliegue realizado de forma local y remota sobre Google Cloud.
 
-## Autor
-Sebastián Collado Montañez
-
 ## Detalles de la pila
 Apache + PHP 7.2 + CodeIgniter 3 + SQLite
 
